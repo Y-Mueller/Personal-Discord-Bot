@@ -10,7 +10,7 @@ const botPrefix = "$"
 
 var botname = "Yungs E-Girl"
 
-const token = "OTM1NDM1MTQ5NTUyNzk5NzQ1.Ye-l3w.t_iNbdSFQXdX_J8Gs18pPUw2uUs";
+const token = "YOUR_BOT_TOKEN_HERE";
 
 const express = require('express');
 const app = express();
