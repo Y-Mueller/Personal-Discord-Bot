@@ -1,6 +1,6 @@
 # Personal-Discord-Bot
 Personal Discord Bot handcrafted with love! &lt;3
-**NOTE**: This Bot runs right now on REPLIT.com. (Dont confuse yourself with this file.)
+**NOTE**: This Bot runs right now on [replit](https://replit.com). (Dont confuse yourself with [this](https://github.com/yungbeatz/Personal-Discord-Bot/blob/main/src/.replit) file.)
 
 ## Commands
 
