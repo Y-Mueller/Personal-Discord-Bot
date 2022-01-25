@@ -1,6 +1,6 @@
 # Personal-Discord-Bot
 Personal Discord Bot handcrafted with love! &lt;3
-
+**NOTE**: This Bot runs right now on REPLIT.com. (Dont confuse yourself with this file.)
 
 ## Commands
 
