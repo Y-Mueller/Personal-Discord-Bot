@@ -1,5 +1,6 @@
 # Personal-Discord-Bot
-Personal Discord Bot handcrafted with love! &lt;3
+Personal Discord Bot handcrafted with love! ![](https://cdn.discordapp.com/emojis/649382052076060673.webp?size=16&quality=lossless)
+
 **NOTE**: This Bot runs right now on [replit](https://replit.com). (Dont confuse yourself with [this](https://github.com/yungbeatz/Personal-Discord-Bot/blob/main/src/.replit) file.)
 
 ## Commands
