@@ -5,7 +5,7 @@ Personal Discord Bot handcrafted with love! ![](https://cdn.discordapp.com/emoji
 
 ### My best creations for this bot:
 ```js
-  const { Client, Intents } = require('discord.js');
+const { Client, Intents } = require('discord.js');
 const { MessageEmbed } = require('discord.js');
 const googleIt = require('google-it');
 const cron = require('cron');
