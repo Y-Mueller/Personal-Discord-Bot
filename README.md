@@ -9,6 +9,8 @@ Personal Discord Bot handcrafted with love! ![](https://cdn.discordapp.com/emoji
 const { MessageEmbed } = require('discord.js');
 const googleIt = require('google-it');
 const cron = require('cron');
+
+
   //Searches the Internet!!!
   if(command === 'search'){
     if(message.content === '$search'){
