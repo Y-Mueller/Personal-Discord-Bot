@@ -53,7 +53,7 @@ var job = new CronJob('00 30 23 * * 1-5', function() {
 }, null, true, 'Europe/Zurich');
 job.start();
 
-TTTimed Good Night Message for Sunday
+//Timed Good Night Message for Sunday
 var CronJob = require('cron').CronJob;
 var job = new CronJob('00 30 23 * * 0', function() {
   console.log('Timed Good Night Message sent. (sunday)');
