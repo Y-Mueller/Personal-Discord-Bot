@@ -8,7 +8,7 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 const botPrefix = "$"
 
 
-var botname = "Yungs E-Girl"
+var botname = "Steve"
 
 const token = "YOUR_BOT_TOKEN_HERE";
 
@@ -20,7 +20,7 @@ app.listen(port, () => console.log(`${botname} connected to http://localhost:${p
 
 client.on('ready', () => {
   console.log('Status is working fine!')
-  client.user.setActivity(`with yungs dick 🍆`, { type: "PLAYING" })
+  client.user.setActivity(`Minecraft`, { type: "PLAYING" })
   client.user.setPresence({ status: 'dnd' })
 
 });
@@ -75,21 +75,6 @@ client.on('messageCreate', (message) => {
     console.log(`${user} triggered autoresponder \`i win\``);
     message.channel.send({ content: 'no you dont' });
   }
-  if (message.content.toLowerCase() === 'dick') {
-    const user = message.author.username || message.author;
-    console.log(`${user} triggered autoresponder \`dick\``);
-    message.channel.send({ content: 'https://wallpaperaccess.com/full/1502826.jpg' })
-  }
-  if (message.content.toLowerCase() === 'cpr') {
-    const user = message.author.username || message.author;
-    console.log(`${user} triggered autoresponder \`cpr\``);
-    message.channel.send({ content: 'https://www.youtube.com/watch?v=bKRgST9bYG0' })
-  }
-  if (message.content.toLowerCase() === 'loli') {
-    const user = message.author.username || message.author;
-    console.log(`${user} triggered autoresponder \`loli\``);
-    message.channel.send({ content: `SOMEONE ?ban ${user}` })
-  }
   if (message.content.toLowerCase() === 'salat') {
     const user = message.author.username || message.author;
     console.log(`${user} triggered autoresponder \`salat\``);
@@ -105,11 +90,6 @@ client.on('messageCreate', (message) => {
       .setThumbnail('https://cdn.discordapp.com/emojis/930850546921902170.webp?size=96&quality=lossless')
     message.channel.send({ embeds: [exampleEmbed] });
   }
-  if (message.content === 'DEUTSCHLAND') {
-    const user = message.author.username || message.author;
-    console.log(`${user} triggered autoresponder \`DEUTSCHLAND\``);
-    message.channel.send({ content: '<@742092165731319898> <@196323838722703360>\n https://i.gifer.com/FBJP.gif' });
-  }
   if (message.content.toLowerCase() === '<:mercedes:930850546921902170>') {
     const exampleEmbed = new MessageEmbed()
       .setColor('#259797')
@@ -122,12 +102,6 @@ client.on('messageCreate', (message) => {
     const user = message.author.username || message.author;
     console.log(`${user} triggered autoresponder \`kek\``);
     message.channel.send({ content: '<a:kek:933007522539909141>' })
-  }
-  if (message.content === '187') {
-    const user = message.author.username || message.author;
-    console.log(`${user} triggered autoresponder \`187\``);
-    message.channel.send({ content: 'https://cdn.discordapp.com/attachments/930379360639254548/933022743606226954/GZUZ_sagt_187.mp4' })
-  }
 });
 
 //commmands
@@ -186,7 +160,7 @@ client.on('messageCreate', message => {
     const user1 = message.author.username;
     console.log(`${user1} triggered command \`nick\``);
     if (message.content === '$nick') {
-      message.channel.send({ content: `Bro... \`$nick\` _ __Dein Nickname__ _. Noch nie jemand so behindert wie du gesehen ${user}` })
+      message.channel.send({ content: `Bro... \`$nick\` _ __Dein Nickname__ _.` })
       return;
     }
     message.member.setNickname(message.content.replace('$nick ', ''));
@@ -195,7 +169,7 @@ client.on('messageCreate', message => {
   if (command === 'resetnick') {
     const user = message.author.username || message.author;
     console.log(`${user} triggered command \`resetnick\``);
-    if (!message.member.nickname) return message.channel.send({ content: "Alter du hast nichtmal einen nickname, was willst du reseten??? DUMM??." });
+    if (!message.member.nickname) return message.channel.send({ content: "Alter du hast nichtmal einen nickname, was willst du resetten???." });
     message.member.setNickname("").then(member => {
       message.channel.send({ content: "Nickname wurde zurückgesetzt." });
     }).catch(e => {
@@ -217,27 +191,12 @@ client.on('messageCreate', message => {
       .addFields(
         { name: '<:cmd:932999035831353377> COMMANDS', value: '_ _' },
         { name: ':chart_with_upwards_trend: Raters', value: '➜ `$gayrate`\n➜ `$simprate`' },
-        { name: ':globe_with_meridians: Sources', value: '➜ `$horny`\n➜ `$suicide`' },
+        { name: ':globe_with_meridians: Sources', value: '➜ `$suicide`' },
         { name: '<:info:932999652125585540> User CMD\'s', value: '➜ `$av`\n➜ `$nick`\n➜ `$resetnick`' },
         { name: '<:yung:932981081689432144> Affection', value: '➜ `$hug`' },
-        { name: '<:devicon:932999900449357885> Misc', value: '➜ `$ping`\n➜ `$help`\n➜ `$revive`' },
-        { name: '♻️ AUTORESPONDER KEYWORDS', value: '➜ `i win`\n➜ `dick`\n➜ `cpr`\n➜ `Lewis Hamilton is the GOAT💜`\n➜ `DEUTSCHLAND`\n➜ <:mercedes:930850546921902170>\n➜ `kek`\n➜ `187`' }
+        { name: '<:devicon:932999900449357885> Misc', value: '➜ `$ping`\n➜ `$help`' }
       )
       .setFooter({ text: '⁺ yungbeatz', iconURL: 'https://cdn.discordapp.com/avatars/605760781664911380/a_26b930ec44b511971d0770acc3635ffe.gif' });
-    message.channel.send({ embeds: [exampleEmbed] });
-  }
-  if (command === 'horny') {
-    const user = message.author.username || message.author;
-    console.log(`${user} triggered command \`horny\``);
-    const exampleEmbed = new MessageEmbed()
-      .setColor('#0099ff')
-      .setTitle('Gönn dir 😈')
-      .setDescription('Ich weiss selber nicht warum ich diesen Bot gemacht hab. Während ich diese Nachricht schreibe ist es <t:1642206222:t> also jaaaaaa.')
-      .setThumbnail('https://cdn.discordapp.com/avatars/920285881338843146/c560fb0b2df78147e6641853aa3e8d87.png?size=4096')
-      .addFields(
-        { name: 'Links', value: 'https://pornhub.com\nhttps://xnxx.com\nhttps://xvideos.com\nhttps://youporn.com' },
-      )
-      .setFooter({ text: '⁺ yungbeatz', iconURL: 'https://cdn.discordapp.com/avatars/920285881338843146/c560fb0b2df78147e6641853aa3e8d87.png?size=4096' });
     message.channel.send({ embeds: [exampleEmbed] });
   }
   if (command === 'suicide') {
@@ -258,7 +217,7 @@ client.on('messageCreate', message => {
     const user = message.mentions.users.first() || message.author;
     const user1 = message.author.username
     console.log(`${user1} triggered command \`revive\``);
-    message.channel.send({ content: `KOMMT HER @everyone!!! ${user} WILL REDEN!! <:nigga:931546559064195144>` })
+    message.channel.send({ content: `KOMMT HER @everyone!!! ${user} WILL REDEN!!' })
   }
   if (command === 'topic') {
     const user = message.author.username || message.author;
@@ -280,11 +239,11 @@ client.on('messageCreate', message => {
     console.log(`${user1} triggered command \`hug\``);
     const mentioned_user = message.mentions.users.first()
     if (message.content === '$hug') {
-      message.channel.send('Digga... `$hug @username`. Bist schon noch behindert ngl...`')
+      message.channel.send('Bro... `$hug @username`....`')
       return;
     }
     if (message.content === '$hug @everyone' || message.content === '$hug @here') {
-      message.channel.send('Alter, bist du komplett behindert? Das ist illegal.')
+      message.channel.send('Alter? Das ist illegal.')
       return;
     }
     let { hugs } = require("./hug_gifs.json")
@@ -296,21 +255,29 @@ client.on('messageCreate', message => {
       .setFooter({ text: 'so cute omggg! <33', iconURL: 'https://cdn.discordapp.com/emojis/649382052076060673.webp?size=96&quality=lossless' });
     message.channel.send({ embeds: [hugEmbed] });
   }
+  if(command === 'search'){
+    if(message.content === '$search porn'){
+      message.channel.send('nein') 
+      return;
+    }
+    const embed = new MessageEmbed()
+        .setTitle("Google Search Results")
+        .setColor(3426654)
+        .setTimestamp()
+        .setThumbnail('https://c.tenor.com/HIc93FPnB8QAAAAS/egirl-pfp.gif')    
 
+    googleIt({'query': args.join(' ')}).then(results => {
+        results.forEach(function(item, index) { 
+            embed.addField((index + 1) + ": " + item.title, "<" + item.link + ">");
+        });
+        
+        message.channel.send({embeds: [embed] });
+    }).catch(e => {
+        // any possible errors that might have occurred (like no Internet connection)
+    });
+};
 });
-client.on('voiceStateUpdate', (newState, oldState) => {
-  const channelId = '933463171438641264';
-  if (oldState.channelId && newState.channelId) {
-    console.log(`Someone Joined AFK Channel, Nickname set to "AFK"`);
-    newState.member.setNickname('AFK');
-  } else if (newState.channelId && !oldState.channelId) {
-    console.log(`Someone left AFK Channel, NIckname set to default.`);
-    oldState.member.setNickname("")
-  } else {
-    console.log('Neither of the two actions occured');
-    newState.member.setNickname("")
-  }
-});
+
 
 
 
