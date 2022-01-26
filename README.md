@@ -11,8 +11,16 @@ const googleIt = require('google-it');
 const cron = require('cron');
 
 
+const botPrefix = "$"
+
+
   //Searches the Internet!!!
-  if(command === 'search'){
+  client.on('messageCreate', message => {
+  if (!message.content.startsWith(botPrefix) || message.author.bot) return;
+  const args = message.content.slice(botPrefix.length).split(/ +/);
+  const command = args.shift().toLowerCase();
+
+if(command === 'search'){
     if(message.content === '$search'){
       message.channel.send('Your'e using this command wrong!\n`$search <keyword/s>`') 
       return;
@@ -30,6 +38,7 @@ const cron = require('cron');
         // any possible errors that might have occurred (like no Internet connection)
     });
 };
+});
 
 var CronJob = require('cron').CronJob;
 var job = new CronJob('00 30 06 * * 1-5', function() {
